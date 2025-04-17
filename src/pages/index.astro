@@ -1,0 +1,388 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'SCOPE Dataset',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!--<Hero3>
+    <Fragment slot="title">
+      <span class="hidden xl:inline">
+        <span class="font-semibold"></span>
+        </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
+    </Fragment>
+  </Hero3>-->
+
+  <!-- Hero Widget ******************* -->
+  <!--
+  <Hero3
+  image={{ src: logo_path, alt: 'scope-logo', width:'1284', height:'295'}}
+  </Hero3>
+  -->
+  <Hero3
+    image={{ src: '~/assets/images/scope_less_dark.png', alt: 'scope-logo', width:'1284', height:'295'}}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Dataset',
+        href: 'https://es-cloud.cs.uni-tuebingen.de/d/05d6ed2ea93f4c73a057/',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      {
+        variant: 'primary',
+        text: 'Toolkit',
+        href: 'https://github.com/ekut-es/scope-dataset',
+        target: '_blank',
+        icon: 'tabler:tool',
+      },
+      {
+        variant: 'primary',
+        text: 'Paper',
+        href: 'https://www.arxiv.org/pdf/2408.03065',
+        target: '_blank',
+        icon: 'tabler:file-text',
+      },
+      
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="hidden xl:inline">
+        <span class="font-semibold"></span> A Synthetic Multi-Modal Dataset for Collective Perception Including Physical-Correct Weather Conditions
+        </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
+    </Fragment>
+  </Hero3>
+
+  <Content
+  id="scenarios"
+  isReversed
+    items={[
+      {
+        title: 'Diverse Scenarios',
+        description:
+          'Over 40 diverse scenarios in urban, suburban, rural and highway environments',
+          icon: 'tabler:road',
+      },
+      {
+        title: 'Two Novel Maps',
+        description:
+          'Two novel digital-twin maps from Karlsruhe and Tübingen (Germany) for a more realistic environment',
+          icon: 'tabler:map',
+      },
+      {
+        title: 'Diverse Road Users',
+        description:
+          'First synthetic collective perception dataset including not only cars, vans, motorcyclists but also cyclists and pedestrians',
+          icon: 'tabler:bike',
+      },
+      {
+        title: 'Edge Case Scenarios',
+        description:
+          'Edge cases like a roundabout or a tunnel sections to allow for a comprehensive evaluation',
+          icon: 'tabler:arrow-roundabout-left',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Cities_scenarios.png',
+      alt: 'scenarios',
+      
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scenarios</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="environment"
+    isAfterContent
+    items={[
+      {
+        title: 'Times of Day',
+        description:
+          'Recordings on different times of day including night time',
+          icon: 'tabler:moon',
+      },
+      {
+        title: 'Weather Conditions',
+        description:
+          'Three varying intensities for rain and fog to allow for an evaluation under adverse weather',
+          icon: 'tabler:cloud-rain',
+      },
+      {
+        title: 'Image Augmentation',
+        description:
+          'Realistic and physically-accurate rendering of falling rain with raindrops on windshield and fog on image data',
+          icon: 'tabler:camera',
+      },
+      {
+        title: 'Point Cloud Augmentation',
+        description:
+          'Realistic models to augment point clouds to simulate weather-affected LiDAR data',
+          icon: 'tabler:360-view',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Weather-sim.png',
+      alt: 'scenarios',
+      
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Environmental Conditions</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="sensors"
+    isAfterContent
+    isReversed
+    items={[
+      {
+        title: 'Sensor Carriers',
+        description:
+          'The sensor suite is mounted on a varying number of connected and automated vehicles (CAVs) and Roadside Units (RSUs) per scenario',
+          icon: 'tabler:car',
+      },
+      {
+        title: 'RGB Cameras',
+        description:
+          'Five RGB cameras provide stereo images as well as a 360° surround view with a resolution of 1920x1080 px',
+          icon: 'tabler:camera',
+      },
+      {
+        title: 'Semantic Segmentation Cameras',
+        description:
+          'Five semantic segmentation cameras with same specificataion as for the RGB cameras',
+          icon: 'tabler:photo-filled',
+      },
+      {
+        title: '32 and 64-layer 360° LiDARs',
+        description:
+          'Realistic LiDAR sensor model for 32-layer and 64-layer 360° LiDAR (Velodyne VLP32 and HDL64)',
+          icon: 'tabler:360-view',
+      },
+      {
+        title: 'Solid State LiDAR',
+        description:
+          'First dataset integrating a solid state LiDAR (Blickfeld CUBE)',
+          icon: 'tabler:3d-cube-sphere',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/SensorSetup.png',
+      alt: 'Colorful Image',
+      width: '983',
+      height: '932'
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sensor Suite</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="structure"
+    isAfterContent
+    items={[
+      {
+        title: 'Seperate Environmental Conditions',
+        description:
+          'Weather conditions are given seperately to allow for an independent evaluation',
+          icon: 'tabler:file-stack',
+      },
+      {
+        title: 'Data Hierarchy',
+        description:
+          'Hierarchically structured sensor data and transformation matrices per vehicle per scenario',
+          icon: 'tabler:hierarchy-3',
+      },
+      {
+        title: 'Coordinate Transforms',
+        description:
+          'Easy coordinate transformation with already given transformation matrices for each vehicle and sensor',
+          icon: 'tabler:gizmo',
+      },
+      {
+        title: 'File Formats',
+        description:
+          'Common file formats such as .bin, .txt, and .png for an easy and efficient data loading',
+          icon: 'tabler:file-3d',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/data-structure-gray.png',
+      alt: 'File Hierarchy of SCOPE',
+      width: '1586',
+      height: '1497'
+      
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Data Structure</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="toolkit"
+    isAfterContent
+    isReversed
+    items={[
+      {
+        title: 'Installation',
+        description:
+          'Super easy toolkit installation, just run: pip install scope-toolkit',
+          icon: 'tabler:settings',
+      },
+      {
+        title: 'Download',
+        description:
+          'Efficient parallel downloading and extraction into the correct structure',
+          icon: 'tabler:download',
+      },
+      {
+        title: 'Visualization',
+        description:
+          'The visualization module allows for an easy exploration of the dataset',
+          icon: 'tabler:photo',
+      },
+      {
+        title: 'Data Loading',
+        description:
+          'Provided dataset class for efficient training and testing in PyTorch',
+          icon: 'tabler:rotate-clockwise-2',
+      },
+      {
+        title: 'Evaluation',
+        description:
+          'Evaluation module for easy and fair comparison of different methods using state-of-the-art metrics',
+          icon: 'tabler:rectangular-prism',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Toolkit.png',
+      alt: 'scenarios',
+      width: '2125',
+      height: '2059'
+      
+    }}
+  > 
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Toolkit</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+    </Fragment>
+  </Content>
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faqs"
+    title="Frequently Asked Questions"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why should I use SCOPE?',
+        description:
+          "SCOPE is the most comprehensive synthetic collective perception dataset. It is the first dataset with realistic LiDAR sensor models including a solid state LiDAR and weather simulations for camera and LiDAR. Moreover, in contrast to other publicly available datasets vulnerable road users are included.",
+      },
+      {
+        title: 'How many Frames does SCOPE consist of?',
+        description:
+          "SCOPE consists of 44 scenarios with a scenario length of 100 frames (10s) with four environmental conditions each. This results in a total of 17,600 frames.",
+      },
+      {
+        title: 'What is the Train/Validation/Test Split?',
+        description:
+          'SCOPE consists of 12,320 frames for training, 1,760 frames for validation and 3,520 frames for testing.',
+      },
+      {
+        title: 'How many Sensors/Vehicles are present in the Dataset?',
+        description:
+          "Vehicles and Roadside Untis are equipped with sensors. The scenarios contain up to 24 collaborative agents (20 CAVs + 4 RSUs) and up to 60 further road users as passive traffic.",
+      },
+      {
+        title: "Who created SCOPE?",
+        description:
+          "SCOPE was created by Jörg Gamerdinger and Sven Teufel (PhD students @ University of Tübingen), assistent by Stephan Amann, Jan-Patrick Kirchner and Süleyman Simsek (BSc./MSc. students). The work was supervised by Prof. Oliver Bringmann (Head of Embedded Systems Group, University of Tübingen)",
+      },
+      {
+        title: "How to cite this Work?",
+        description:
+          "@INPROCEEDINGS{SCOPE-Dataset, \n author={Gamerdinger, Jörg and Teufel, Sven and Schulz, Patrick and Amann, Stephan and Kirchner, Jan-Patrick  and Bringmann, Oliver},\n booktitle={2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n title={SCOPE: A Synthetic Multi-Modal Dataset for Collective Perception Including Physical-Correct Weather Conditions},\n year={2024},\n pages={1-8}\n}",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** 
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /-->
+
+  <!-- CallToAction Widget *********** 
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction>
+-->
+</Layout>
