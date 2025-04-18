@@ -113,14 +113,14 @@ const metadata = {
           icon: 'tabler:arrow-roundabout-left',
       },
   ]}
+  >
+  <Fragment slot="features">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Overview</h3>
+  </Fragment>
 
-<Fragment slot="content">
-  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scenarios</h3>
-</Fragment>
-
-<Fragment slot="bg">
-  <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
-</Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+  </Fragment>
 </Features>
 
  
@@ -144,7 +144,7 @@ const metadata = {
         title: 'Diversity',
         description:
           'Besides varying snow coverage intensities, also varying lighting conditions and precipitation is included',
-          icon: 'tabler:bike',
+          icon: 'tabler:binary-tree-2',
       },
       {
         title: '???',
@@ -160,7 +160,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scenarios</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Environment</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -176,25 +176,25 @@ const metadata = {
         title: 'No Snow',
         description:
           'Summer conditions without any snow',
-          icon: 'tabler:moon',
+          icon: 'tabler:sun',
       },
       {
         title: 'Light Snow',
         description:
           'Snow covered environments with no snow on the road. Road is wet.',
-          icon: 'tabler:moon',
+          icon: 'tabler:cloud',
       },
       {
         title: 'Medium Snow',
         description:
           'Road is partially covered with snow. Tyre tracks are free of snow',
-          icon: 'tabler:moon',
+          icon: 'tabler:cloud-snow',
       },
       {
         title: 'High Snow',
         description:
           'Full snow coverage of the road including tyre tracks',
-          icon: 'tabler:moon',
+          icon: 'tabler:snowflake',
       },
       
     ]}
@@ -205,7 +205,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Environmental Conditions</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Snow</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -222,31 +222,31 @@ const metadata = {
         title: 'Cameras',
         description:
           'We provide image data from a RGB camera, semantic segmentation and depth camera with 1920x1080 px.',
-          icon: 'tabler:car',
+          icon: 'tabler:camera',
       },
       {
         title: 'LiDAR',
         description:
           'We include a 360° 32-layer LiDAR sensor with 200m sensing range',
-          icon: 'tabler:camera',
+          icon: 'tabler:360-view',
       },
       {
         title: 'Extensive Labels',
         description:
           'We include 2D labels in TuSimple format, 2D + 3D bounding boxes for delineators',
-          icon: 'tabler:photo-filled',
+          icon: 'tabler:label',
       },
       {
         title: 'Map data',
         description:
           'Map information is provided in OpenDrive and Lanelet format',
-          icon: 'tabler:360-view',
+          icon: 'tabler:map-route',
       },
       {
         title: 'Vehicle State',
         description:
           'Information about the vehicle state (position, velocity, dimension,... ) are provided for usage of improved metrics such as Lane Safety Metric',
-          icon: 'tabler:3d-cube-sphere',
+          icon: 'tabler:car-4wd',
       },
     ]}
     image={{
@@ -257,7 +257,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sensor Suite</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Data</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -309,7 +309,7 @@ const metadata = {
   }}
 >
   <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sensor Suite</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Results</h3>
   </Fragment>
 
   <Fragment slot="bg">
