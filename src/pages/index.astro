@@ -13,6 +13,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import LogoV2 from '@/assets/images/Logo_v2.png';
+
 const metadata = {
   title: 'Snowy-Lane',
   ignoreTitleTemplate: true,
@@ -36,8 +38,8 @@ const metadata = {
   </Hero3>
   -->
 
-  <Hero
-    image={{ src: '~/assets/images/Logo_v2', alt: 'snowy-lane-logo'}} 
+  <Hero3
+    image={{ src: LogoV2, alt: 'snowy-lane-logo'}} 
     actions={[
       {
         variant: 'primary',
