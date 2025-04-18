@@ -14,7 +14,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'SCOPE Dataset',
+  title: 'Snowy-Lane',
   ignoreTitleTemplate: true,
 };
 ---
@@ -36,7 +36,7 @@ const metadata = {
   </Hero3>
   -->
   <Hero3
-    image={{ src: '~/assets/images/scope_less_dark.png', alt: 'scope-logo', width:'1284', height:'295'}}
+    image={{ src: '~/assets/images/scope_less_dark.png', alt: 'scope-logo', width:'1284', height:'295'}} 
     actions={[
       {
         variant: 'primary',
@@ -70,32 +70,86 @@ const metadata = {
     </Fragment>
   </Hero3>
 
-  <Content
-  id="scenarios"
-  isReversed
-    items={[
-      {
-        title: 'Diverse Scenarios',
+  <Features
+  id="overview"
+  tagline="Overview"
+  title="What you get with Snowy-Lane?"
+  subtitle="Snowy-Lane is the first dataset for robust lane detection in snow covered environments"
+  items={[
+    {
+        title: 'Synthetic Dataset',
         description:
-          'Over 40 diverse scenarios in urban, suburban, rural and highway environments',
+          'Synthetic Dataset created using CARLA simulator',
           icon: 'tabler:road',
       },
       {
-        title: 'Two Novel Maps',
+        title: 'Novel Map',
         description:
-          'Two novel digital-twin maps from Karlsruhe and Tübingen (Germany) for a more realistic environment',
+          'A novel map representing a rural environment in southern germany including delineator assets',
           icon: 'tabler:map',
       },
       {
-        title: 'Diverse Road Users',
+        title: 'Snow Coverage',
         description:
-          'First synthetic collective perception dataset including not only cars, vans, motorcyclists but also cyclists and pedestrians',
+          'Snowy-Lane is the first large scale dataset with snow covered roads',
           icon: 'tabler:bike',
       },
       {
-        title: 'Edge Case Scenarios',
+        title: 'Sensor Suite',
         description:
-          'Edge cases like a roundabout or a tunnel sections to allow for a comprehensive evaluation',
+          'Snowy-Lane not only provides high-resolution camera images but also LiDAR point clouds',
+          icon: 'tabler:arrow-roundabout-left',
+      },
+      {
+        title: 'Large Scale',
+        description:
+          'Snowy-Lane consists of a summer condition dataset with 20,000 frames and to snowy subsets with 30,000 frames each',
+          icon: 'tabler:arrow-roundabout-left',
+      },
+      {
+        title: 'TODO',
+        description:
+          'ONE more face',
+          icon: 'tabler:arrow-roundabout-left',
+      },
+  ]}
+
+<Fragment slot="content">
+  <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Scenarios</h3>
+</Fragment>
+
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+</Fragment>
+>
+
+ 
+  <Content
+  id="environment"
+  isReversed
+    items={[
+      {
+        title: 'Synthetic Environment',
+        description:
+          'Snowy-Lane is a synthetic dataset generated using CARLA simulator',
+          icon: 'tabler:road',
+      },
+      {
+        title: 'Novel Map',
+        description:
+          'A novel realistic high quality map representing rural environment in southern germany including german road assets',
+          icon: 'tabler:map',
+      },
+      {
+        title: 'Diversity',
+        description:
+          'Besides varying snow coverage intensities, also varying lighting conditions and precipitation is included',
+          icon: 'tabler:bike',
+      },
+      {
+        title: '???',
+        description:
+          '???',
           icon: 'tabler:arrow-roundabout-left',
       },
     ]}
@@ -115,33 +169,34 @@ const metadata = {
   </Content>
 
   <Content
-    id="environment"
+    id="snow"
     isAfterContent
     items={[
       {
-        title: 'Times of Day',
+        title: 'No Snow',
         description:
-          'Recordings on different times of day including night time',
+          'Summer conditions without any snow',
           icon: 'tabler:moon',
       },
       {
-        title: 'Weather Conditions',
+        title: 'Light Snow',
         description:
-          'Three varying intensities for rain and fog to allow for an evaluation under adverse weather',
-          icon: 'tabler:cloud-rain',
+          'Snow covered environments with no snow on the road. Road is wet.',
+          icon: 'tabler:moon',
       },
       {
-        title: 'Image Augmentation',
+        title: 'Medium Snow',
         description:
-          'Realistic and physically-accurate rendering of falling rain with raindrops on windshield and fog on image data',
-          icon: 'tabler:camera',
+          'Road is partially covered with snow. Tyre tracks are free of snow',
+          icon: 'tabler:moon',
       },
       {
-        title: 'Point Cloud Augmentation',
+        title: 'High Snow',
         description:
-          'Realistic models to augment point clouds to simulate weather-affected LiDAR data',
-          icon: 'tabler:360-view',
+          'Full snow coverage of the road including tyre tracks',
+          icon: 'tabler:moon',
       },
+      
     ]}
     image={{
       src: '~/assets/images/Weather-sim.png',
@@ -211,105 +266,56 @@ const metadata = {
   </Content>
 
   <Content
-    id="structure"
-    isAfterContent
-    items={[
-      {
-        title: 'Seperate Environmental Conditions',
-        description:
-          'Weather conditions are given seperately to allow for an independent evaluation',
-          icon: 'tabler:file-stack',
-      },
-      {
-        title: 'Data Hierarchy',
-        description:
-          'Hierarchically structured sensor data and transformation matrices per vehicle per scenario',
-          icon: 'tabler:hierarchy-3',
-      },
-      {
-        title: 'Coordinate Transforms',
-        description:
-          'Easy coordinate transformation with already given transformation matrices for each vehicle and sensor',
-          icon: 'tabler:gizmo',
-      },
-      {
-        title: 'File Formats',
-        description:
-          'Common file formats such as .bin, .txt, and .png for an easy and efficient data loading',
-          icon: 'tabler:file-3d',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/data-structure-gray.png',
-      alt: 'File Hierarchy of SCOPE',
-      width: '1586',
-      height: '1497'
-      
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Data Structure</h3>
-    </Fragment>
+  id="results"
+  isAfterContent
+  isReversed
+  items={[
+    {
+      title: 'Sensor Carriers',
+      description:
+        'The sensor suite is mounted on a varying number of connected and automated vehicles (CAVs) and Roadside Units (RSUs) per scenario',
+        icon: 'tabler:car',
+    },
+    {
+      title: 'RGB Cameras',
+      description:
+        'Five RGB cameras provide stereo images as well as a 360° surround view with a resolution of 1920x1080 px',
+        icon: 'tabler:camera',
+    },
+    {
+      title: 'Semantic Segmentation Cameras',
+      description:
+        'Five semantic segmentation cameras with same specificataion as for the RGB cameras',
+        icon: 'tabler:photo-filled',
+    },
+    {
+      title: '32 and 64-layer 360° LiDARs',
+      description:
+        'Realistic LiDAR sensor model for 32-layer and 64-layer 360° LiDAR (Velodyne VLP32 and HDL64)',
+        icon: 'tabler:360-view',
+    },
+    {
+      title: 'Solid State LiDAR',
+      description:
+        'First dataset integrating a solid state LiDAR (Blickfeld CUBE)',
+        icon: 'tabler:3d-cube-sphere',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/SensorSetup.png',
+    alt: 'Colorful Image',
+    width: '983',
+    height: '932'
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sensor Suite</h3>
+  </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
-    </Fragment>
-  </Content>
-
-  <Content
-    id="toolkit"
-    isAfterContent
-    isReversed
-    items={[
-      {
-        title: 'Installation',
-        description:
-          'Super easy toolkit installation, just run: pip install scope-toolkit',
-          icon: 'tabler:settings',
-      },
-      {
-        title: 'Download',
-        description:
-          'Efficient parallel downloading and extraction into the correct structure',
-          icon: 'tabler:download',
-      },
-      {
-        title: 'Visualization',
-        description:
-          'The visualization module allows for an easy exploration of the dataset',
-          icon: 'tabler:photo',
-      },
-      {
-        title: 'Data Loading',
-        description:
-          'Provided dataset class for efficient training and testing in PyTorch',
-          icon: 'tabler:rotate-clockwise-2',
-      },
-      {
-        title: 'Evaluation',
-        description:
-          'Evaluation module for easy and fair comparison of different methods using state-of-the-art metrics',
-          icon: 'tabler:rectangular-prism',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/Toolkit.png',
-      alt: 'scenarios',
-      width: '2125',
-      height: '2059'
-      
-    }}
-  > 
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Toolkit</h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
-    </Fragment>
-  </Content>
-
-
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
+  </Fragment>
+</Content>
   <!-- FAQs Widget ******************* -->
 
   <FAQs
