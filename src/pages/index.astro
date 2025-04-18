@@ -64,7 +64,7 @@ const metadata = {
   >
     <Fragment slot="title">
       <span class="hidden xl:inline">
-        <span class="font-semibold"></span> A Synthetic Multi-Modal Dataset for Collective Perception Including Physical-Correct Weather Conditions
+        <span class="font-semibold"></span> Robust Lane Detection on Snow-covered Rural Roads Using Infrastructual Elements
         </span>
       <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
     </Fragment>
@@ -319,19 +319,19 @@ const metadata = {
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why should I use SCOPE?',
+        title: 'Why should I use Snowy-Lane?',
         description:
-          "SCOPE is the most comprehensive synthetic collective perception dataset. It is the first dataset with realistic LiDAR sensor models including a solid state LiDAR and weather simulations for camera and LiDAR. Moreover, in contrast to other publicly available datasets vulnerable road users are included.",
+          "Snowy-Lane is the first large scale lane detection dataset including snow covered roads. This allows for improving robustness of lane detection methods under such adverse conditions.",
       },
       {
-        title: 'How many Frames does SCOPE consist of?',
+        title: 'How many Frames does Snowy-Lane consist of?',
         description:
-          "SCOPE consists of 44 scenarios with a scenario length of 100 frames (10s) with four environmental conditions each. This results in a total of 17,600 frames.",
+          "Snowy-Lane consists of 100 clips with 100 frames per subset and snow-coverage which leads to a total of 30,000 frames with delineators and 30,000 without. Additionally, 20,000 images under summer conditions are provided.",
       },
       {
         title: 'What is the Train/Validation/Test Split?',
         description:
-          'SCOPE consists of 12,320 frames for training, 1,760 frames for validation and 3,520 frames for testing.',
+          'For Snowy-Lane a 80/10/10 split per subset is used. Hence, 24,000 frames are for training and 3,000 each for validation and test',
       },
       {
         title: 'How many Sensors/Vehicles are present in the Dataset?',
@@ -339,14 +339,14 @@ const metadata = {
           "Vehicles and Roadside Untis are equipped with sensors. The scenarios contain up to 24 collaborative agents (20 CAVs + 4 RSUs) and up to 60 further road users as passive traffic.",
       },
       {
-        title: "Who created SCOPE?",
+        title: "Who created Snowy-Lane?",
         description:
-          "SCOPE was created by Jörg Gamerdinger and Sven Teufel (PhD students @ University of Tübingen), assistent by Stephan Amann, Jan-Patrick Kirchner and Süleyman Simsek (BSc./MSc. students). The work was supervised by Prof. Oliver Bringmann (Head of Embedded Systems Group, University of Tübingen)",
+          "Snowy-Lane was created by Jörg Gamerdinger and Sven Teufel (PhD students @ University of Tübingen), assisted by Benedict Wetzel (MSc. student) and Patrick Schulz (PhD student @ FZI). The work was supervised by Prof. Oliver Bringmann (Head of Embedded Systems Group, University of Tübingen). Thanks to all my co-authors supported this work",
       },
       {
         title: "How to cite this Work?",
         description:
-          "@INPROCEEDINGS{SCOPE-Dataset, \n author={Gamerdinger, Jörg and Teufel, Sven and Schulz, Patrick and Amann, Stephan and Kirchner, Jan-Patrick  and Bringmann, Oliver},\n booktitle={2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n title={SCOPE: A Synthetic Multi-Modal Dataset for Collective Perception Including Physical-Correct Weather Conditions},\n year={2024},\n pages={1-8}\n}",
+          "Citation will follow"
       },
     ]}
   />

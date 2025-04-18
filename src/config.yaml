@@ -1,18 +1,18 @@
 site:
-  name: SCOPE
+  name: Snowy-Lane
   site: 'https://ekut-es.github.io'
-  base: '/scope'
+  base: '/snowy-lane'
   trailingSlash: false
 
-  googleSiteVerificationId: qtZ5ycjiJUSqB88iMfMPGa053TIE3MJcrw-gQq1MmKQ
+  #googleSiteVerificationId: qtZ5ycjiJUSqB88iMfMPGa053TIE3MJcrw-gQq1MmKQ
 
 
 # Default SEO metadata
 metadata:
   title:
-    default: SCOPE
-    template: '%s — SCOPE'
-  description: "A Synthetic Multi-Modal Dataset for Collective Perception Including Physical-Correct Weather Conditions."
+    default: Snowy-Lane
+    template: '%s — Snowy-Lane'
+  description: "Robust Lane Detection on Snow-covered Rural Roads Using Infrastructual Elements"
   robots:
     index: true
     follow: true
