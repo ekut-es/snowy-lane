@@ -48,13 +48,6 @@ const metadata = {
       },
       {
         variant: 'primary',
-        text: 'Toolkit',
-        href: 'https://github.com/ekut-es/scope-dataset',
-        target: '_blank',
-        icon: 'tabler:tool',
-      },
-      {
-        variant: 'primary',
         text: 'Paper',
         href: 'https://www.arxiv.org/pdf/2408.03065',
         target: '_blank',
@@ -78,7 +71,19 @@ const metadata = {
   title="What you get with Snowy-Lane?"
   subtitle="Snowy-Lane is the first dataset for robust lane detection in snow covered environments"
   items={[
-    {
+      {
+        title: 'Snow Coverage',
+        description:
+          'Snowy-Lane is the first large scale dataset with snow covered roads',
+          icon: 'tabler:snowflake',
+      },
+      {
+        title: 'Large Scale',
+        description:
+          'Snowy-Lane consists of a summer condition dataset with 20,000 frames and to snowy subsets with 30,000 frames each',
+          icon: 'tabler:ikosaeder',
+      },
+      {
         title: 'Synthetic Dataset',
         description:
           'Synthetic Dataset created using CARLA simulator',
@@ -91,28 +96,16 @@ const metadata = {
           icon: 'tabler:map',
       },
       {
-        title: 'Snow Coverage',
-        description:
-          'Snowy-Lane is the first large scale dataset with snow covered roads',
-          icon: 'tabler:bike',
-      },
-      {
-        title: 'Sensor Suite',
+        title: 'Comprehensive Sensor Suite',
         description:
           'Snowy-Lane not only provides high-resolution camera images but also LiDAR point clouds',
-          icon: 'tabler:arrow-roundabout-left',
+          icon: 'tabler:camera',
       },
       {
-        title: 'Large Scale',
+        title: 'Extensive Annotations',
         description:
-          'Snowy-Lane consists of a summer condition dataset with 20,000 frames and to snowy subsets with 30,000 frames each',
-          icon: 'tabler:arrow-roundabout-left',
-      },
-      {
-        title: 'TODO',
-        description:
-          'ONE more face',
-          icon: 'tabler:arrow-roundabout-left',
+          'We provide 2D, 3D, Map data and vehicle state ground truth information',
+          icon: 'tabler:tag-starred',
       },
   ]}
   >
@@ -207,7 +200,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Snow</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Snow Coverage Intensities</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -221,13 +214,13 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Cameras',
+        title: 'High Resolution Cameras',
         description:
           'We provide image data from a RGB camera, semantic segmentation and depth camera with 1920x1080 px.',
           icon: 'tabler:camera',
       },
       {
-        title: 'LiDAR',
+        title: '360° LiDAR',
         description:
           'We include a 360° 32-layer LiDAR sensor with 200m sensing range',
           icon: 'tabler:360-view',
@@ -270,7 +263,6 @@ const metadata = {
   <Content
   id="results"
   isAfterContent
-  isReversed
   items={[
     {
       title: 'Sensor Carriers',
@@ -342,14 +334,14 @@ const metadata = {
           'For Snowy-Lane a 80/10/10 split per subset is used. Hence, 24,000 frames are for training and 3,000 each for validation and test',
       },
       {
-        title: 'How many Sensors/Vehicles are present in the Dataset?',
-        description:
-          "Vehicles and Roadside Untis are equipped with sensors. The scenarios contain up to 24 collaborative agents (20 CAVs + 4 RSUs) and up to 60 further road users as passive traffic.",
-      },
-      {
         title: "Who created Snowy-Lane?",
         description:
           "Snowy-Lane was created by Jörg Gamerdinger and Sven Teufel (PhD students @ University of Tübingen), assisted by Benedict Wetzel (MSc. student) and Patrick Schulz (PhD student @ FZI). The work was supervised by Prof. Oliver Bringmann (Head of Embedded Systems Group, University of Tübingen). Thanks to all my co-authors supported this work",
+      },
+      {
+        title: "Who can be contacted in case of questions?",
+        description:
+          "You can send an e-mail to Jörg Gamerdinger (joerg.gamerdinger(at)uni-tuebingen.de",
       },
       {
         title: "How to cite this Work?",

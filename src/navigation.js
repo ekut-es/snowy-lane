@@ -7,31 +7,31 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Scenarios',
-      href: getPermalink('/#scenarios')
+      text: 'Overview',
+      href: getPermalink('/#overview')
     },
     {
-      text: 'Weather',
+      text: 'Environment',
       href: getPermalink('/#environment'),
     },
     {
-      text: 'Sensor Suite',
-      href: getPermalink('/#sensors'),
+      text: 'Snow',
+      href: getPermalink('/#snow'),
     },
     {
-      text: 'Structure',
-      href: getPermalink('/#structure'),
+      text: 'Data',
+      href: getPermalink('/#data'),
     },
     {
-      text: 'Toolkit',
-      href: getPermalink('/#toolkit'),
+      text: 'Results',
+      href: getPermalink('/#results'),
     },
     {
       text: 'FAQs',
       href: getPermalink('/#faqs'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://es-cloud.cs.uni-tuebingen.de/d/05d6ed2ea93f4c73a057/', target: '_blank' }],
+  
 };
 
 export const footerData = {
