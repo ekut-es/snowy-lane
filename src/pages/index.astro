@@ -36,7 +36,7 @@ const metadata = {
   </Hero3>
   -->
   <Hero3
-    image={{ src: '~/assets/images/scope_less_dark.png', alt: 'scope-logo', width:'1284', height:'295'}} 
+    image={{ src: '~/assets/images/Bild2', alt: 'scope-logo', width:'2503', height:'1040'}} 
     actions={[
       {
         variant: 'primary',
@@ -214,38 +214,38 @@ const metadata = {
   </Content>
 
   <Content
-    id="sensors"
+    id="data"
     isAfterContent
     isReversed
     items={[
       {
-        title: 'Sensor Carriers',
+        title: 'Cameras',
         description:
-          'The sensor suite is mounted on a varying number of connected and automated vehicles (CAVs) and Roadside Units (RSUs) per scenario',
+          'We provide image data from a RGB camera, semantic segmentation and depth camera with 1920x1080 px.',
           icon: 'tabler:car',
       },
       {
-        title: 'RGB Cameras',
+        title: 'LiDAR',
         description:
-          'Five RGB cameras provide stereo images as well as a 360° surround view with a resolution of 1920x1080 px',
+          'We include a 360° 32-layer LiDAR sensor with 200m sensing range',
           icon: 'tabler:camera',
       },
       {
-        title: 'Semantic Segmentation Cameras',
+        title: 'Extensive Labels',
         description:
-          'Five semantic segmentation cameras with same specificataion as for the RGB cameras',
+          'We include 2D labels in TuSimple format, 2D + 3D bounding boxes for delineators',
           icon: 'tabler:photo-filled',
       },
       {
-        title: '32 and 64-layer 360° LiDARs',
+        title: 'Map data',
         description:
-          'Realistic LiDAR sensor model for 32-layer and 64-layer 360° LiDAR (Velodyne VLP32 and HDL64)',
+          'Map information is provided in OpenDrive and Lanelet format',
           icon: 'tabler:360-view',
       },
       {
-        title: 'Solid State LiDAR',
+        title: 'Vehicle State',
         description:
-          'First dataset integrating a solid state LiDAR (Blickfeld CUBE)',
+          'Information about the vehicle state (position, velocity, dimension,... ) are provided for usage of improved metrics such as Lane Safety Metric',
           icon: 'tabler:3d-cube-sphere',
       },
     ]}
