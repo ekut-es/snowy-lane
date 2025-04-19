@@ -12,7 +12,7 @@ metadata:
   title:
     default: Snowy-Lane
     template: '%s — Snowy-Lane'
-  description: "Robust Lane Detection on Snow-covered Rural Roads Using Infrastructual Elements"
+  description: "Robust Lane Detection on Snow-covered Rural Roads Using Infrastructural Elements"
   robots:
     index: true
     follow: true
