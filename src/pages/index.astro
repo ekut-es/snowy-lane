@@ -141,12 +141,6 @@ const metadata = {
           'Besides varying snow coverage intensities, also varying lighting conditions and precipitation is included',
           icon: 'tabler:binary-tree-2',
       },
-      {
-        title: '???',
-        description:
-          '???',
-          icon: 'tabler:arrow-roundabout-left',
-      },
     ]}
     image={{
       src: '~/assets/images/Logo_v2.png',
@@ -267,34 +261,28 @@ const metadata = {
   isAfterContent
   items={[
     {
-      title: 'Sensor Carriers',
+      title: 'Metrics',
       description:
-        'The sensor suite is mounted on a varying number of connected and automated vehicles (CAVs) and Roadside Units (RSUs) per scenario',
-        icon: 'tabler:car',
+        'For evaluation we use the TuSimple 2D accuracy, a 3D accuracy with 0.10 m threshold and the Lane Safety Metric (LSM). Results are reported with (2D accuracy, 3D accuracy, LSM)',
+        icon: 'tabler:ruler-2',
     },
     {
-      title: 'RGB Cameras',
+      title: 'Lane Detectors',
       description:
-        'Five RGB cameras provide stereo images as well as a 360° surround view with a resolution of 1920x1080 px',
+        'As a baseline we use three camera-based state-of-the-art lane detectors: SCCN, RESA and UFLD',
+        icon: 'tabler:road',
+    },
+    {
+      title: 'Camera-based Delineator Approach',
+      description:
+        'For our delineator-based approach we use Faster-RCNN and YOLOv5 for image-based object detection',
         icon: 'tabler:camera',
     },
     {
-      title: 'Semantic Segmentation Cameras',
+      title: 'LiDAR-based Delineator Approach',
       description:
-        'Five semantic segmentation cameras with same specificataion as for the RGB cameras',
-        icon: 'tabler:photo-filled',
-    },
-    {
-      title: '32 and 64-layer 360° LiDARs',
-      description:
-        'Realistic LiDAR sensor model for 32-layer and 64-layer 360° LiDAR (Velodyne VLP32 and HDL64)',
+        'For comparison of out delineator-based approach we also use LiDAR-based detection with the PV-RCNN and VoxelRCNN detector',
         icon: 'tabler:360-view',
-    },
-    {
-      title: 'Solid State LiDAR',
-      description:
-        'First dataset integrating a solid state LiDAR (Blickfeld CUBE)',
-        icon: 'tabler:3d-cube-sphere',
     },
   ]}
   image={{
