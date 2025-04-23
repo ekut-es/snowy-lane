@@ -301,54 +301,8 @@ const metadata = {
   </Fragment>
 </Content>
 
-<Hero3
-    image={{ src: '~/assets/images/results.png', alt: 'results', width:'1496', height:'582'}}
-></Hero3>
-
-
-<Features
-  id="overview"
-  tagline="overview"
-  title="What you get with Snowy-Lane?"
-  subtitle="Snowy-Lane is the first dataset for robust lane detection in snow covered environments"
-  items={[
-    {
-      title: 'Metrics',
-      description:
-        'For evaluation we use the TuSimple 2D accuracy, a 3D accuracy with 0.10 m threshold and the Lane Safety Metric (LSM). Results are reported with (2D accuracy, 3D accuracy, LSM)',
-        icon: 'tabler:ruler-2',
-    },
-    {
-      title: 'Lane Detectors',
-      description:
-        'As a baseline we use three camera-based state-of-the-art lane detectors: SCCN, RESA and UFLD',
-        icon: 'tabler:road',
-    },
-    {
-      title: 'Camera-based Delineator Approach',
-      description:
-        'For our delineator-based approach we use Faster-RCNN and YOLOv5 for image-based object detection',
-        icon: 'tabler:camera',
-    },
-    {
-      title: 'LiDAR-based Delineator Approach',
-      description:
-        'For comparison of out delineator-based approach we also use LiDAR-based detection with the PV-RCNN and VoxelRCNN detector',
-        icon: 'tabler:360-view',
-    },
-    <img src='~/assets/images/results.png' alt="results" class="w-full h-auto max-h-[90vh] object-cover rounded-xl shadow-lg" />
-  ]}
-  >
-  <Fragment slot="features">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Overview</h3>
-  </Fragment>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-neutral-900"></div>
-  </Fragment>
-</Features>
-
-  <!-- FAQs Widget ******************* -->
+<img src="~/assets/images/results.png" alt="results" class="w-full max-w-4xl mx-auto my-8 rounded-xl shadow-lg" />
+<!-- FAQs Widget ******************* -->
 
   <FAQs
     id="faqs"
